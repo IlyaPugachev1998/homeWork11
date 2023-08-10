@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,195 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="homeWork11" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd6-rv-ezp">
+                                <rect key="frame" x="72.333333333333329" y="69" width="248.33333333333337" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nd6-rv-ezp" secondAttribute="height" multiplier="193:28" id="Xmv-fs-uH5"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Alarm Clock">
+                                        <attributes>
+                                            <font key="NSFont" size="36" name="SnellRoundhand"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="Mkg-7x-Ic9">
+                                <rect key="frame" x="50" y="687" width="293" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ni6-Zm-Fil">
+                                        <rect key="frame" x="0.0" y="0.0" width="58.666666666666664" height="31"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="11:14">
+                                                <attributes>
+                                                    <font key="NSFont" size="24" name="Georgia"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="71F-CB-PRH">
+                                        <rect key="frame" x="84.666666666666657" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchBtn:" destination="BYZ-38-t0r" eventType="valueChanged" id="n32-EG-sa1"/>
+                                        </connections>
+                                    </switch>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-df-2lm">
+                                        <rect key="frame" x="159.66666666666663" y="0.0" width="133.33333333333337" height="31"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WjT-xe-npN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mkg-7x-Ic9" secondAttribute="height" multiplier="293:31" id="ayN-K0-Q4w"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="19D-jD-xR5">
+                                <rect key="frame" x="10" y="155" width="373" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsf-jP-BOu">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qsf-jP-BOu" secondAttribute="height" multiplier="373:20" id="OrN-zF-6oc"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Volume level">
+                                                <attributes>
+                                                    <font key="NSFont" size="18" name="STIXTwoMath-Regular"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tCk-S0-atw">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="3"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </progressView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="DWm-n4-IEK">
+                                        <rect key="frame" x="0.0" y="83" width="373" height="40"/>
+                                        <subviews>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="1" minimumValueImage="dial.low.fill" catalog="system" maximumValueImage="dial.high.fill" translatesAutoresizingMaskIntoConstraints="NO" id="oUL-Li-Id2">
+                                                <rect key="frame" x="-2" y="10" width="297" height="31"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oUL-Li-Id2" secondAttribute="height" multiplier="293:30" id="JaU-rU-PnV"/>
+                                                </constraints>
+                                                <connections>
+                                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="axM-4A-NWY"/>
+                                                </connections>
+                                            </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.0" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="nUb-av-dcU">
+                                                <rect key="frame" x="312" y="6" width="61" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="nUb-av-dcU" secondAttribute="height" multiplier="61:34" id="ed2-hd-Qru"/>
+                                                </constraints>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="tetxFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="jro-b5-YZ1"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="oUL-Li-Id2" firstAttribute="top" secondItem="DWm-n4-IEK" secondAttribute="top" constant="10" id="h0A-li-J0A"/>
+                                            <constraint firstAttribute="trailing" secondItem="oUL-Li-Id2" secondAttribute="trailing" constant="80" id="sZQ-IL-mct"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tCk-S0-atw" firstAttribute="top" secondItem="qsf-jP-BOu" secondAttribute="bottom" constant="30" id="4Hr-p7-2GY"/>
+                                    <constraint firstItem="tCk-S0-atw" firstAttribute="width" secondItem="19D-jD-xR5" secondAttribute="height" multiplier="373:123" id="ksZ-cf-x40"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mdu-jG-yQ3">
+                                <rect key="frame" x="30" y="356" width="333" height="241"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="gYj-wy-Asu">
+                                        <rect key="frame" x="10" y="0.0" width="313" height="211.33333333333334"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="gYj-wy-Asu" secondAttribute="height" multiplier="40:27" id="XJo-ec-zTz"/>
+                                        </constraints>
+                                        <locale key="locale" localeIdentifier="ru_RU"/>
+                                        <connections>
+                                            <action selector="datePickerAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="pyz-D8-c9c"/>
+                                        </connections>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qE4-mm-kCU">
+                                        <rect key="frame" x="116.33333333333334" y="211.33333333333337" width="100.33333333333334" height="29.666666666666657"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Set this time">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="14" name="Palatino-Roman"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="setThisTimeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WcQ-9g-tSA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gYj-wy-Asu" secondAttribute="trailing" constant="10" id="jBq-da-fKn"/>
+                                    <constraint firstItem="gYj-wy-Asu" firstAttribute="leading" secondItem="Mdu-jG-yQ3" secondAttribute="leading" constant="10" id="vfA-cO-b43"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Mkg-7x-Ic9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="4BM-Ke-KoY"/>
+                            <constraint firstItem="Mdu-jG-yQ3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="5vG-i9-dDi"/>
+                            <constraint firstItem="19D-jD-xR5" firstAttribute="centerX" secondItem="nd6-rv-ezp" secondAttribute="centerX" id="JWx-c3-eAO"/>
+                            <constraint firstItem="nd6-rv-ezp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Ln8-yy-NyM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mkg-7x-Ic9" secondAttribute="bottom" constant="100" id="PGt-TX-nn7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mdu-jG-yQ3" secondAttribute="trailing" constant="30" id="URr-w7-lJ7"/>
+                            <constraint firstItem="Mdu-jG-yQ3" firstAttribute="top" secondItem="19D-jD-xR5" secondAttribute="bottom" constant="78" id="VnF-Ix-Vl6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mkg-7x-Ic9" secondAttribute="trailing" constant="50" id="ZoR-mh-amE"/>
+                            <constraint firstItem="19D-jD-xR5" firstAttribute="top" secondItem="nd6-rv-ezp" secondAttribute="bottom" constant="50" id="hb6-f8-x6D"/>
+                            <constraint firstItem="19D-jD-xR5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nYp-FS-UcX"/>
+                            <constraint firstItem="Mkg-7x-Ic9" firstAttribute="top" secondItem="Mdu-jG-yQ3" secondAttribute="bottom" constant="90" id="sgf-MZ-enO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="19D-jD-xR5" secondAttribute="trailing" constant="10" id="ySx-pP-XR2"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clearButton" destination="mCa-df-2lm" id="8La-Xb-rId"/>
+                        <outlet property="datePicker" destination="gYj-wy-Asu" id="dwe-Ej-BpR"/>
+                        <outlet property="progressView" destination="tCk-S0-atw" id="2RC-uf-z7N"/>
+                        <outlet property="setThisTimeBtn" destination="qE4-mm-kCU" id="SHK-r6-Hex"/>
+                        <outlet property="slider" destination="oUL-Li-Id2" id="KQz-jv-ZSr"/>
+                        <outlet property="switch1" destination="71F-CB-PRH" id="FHy-z6-hU2"/>
+                        <outlet property="textField" destination="nUb-av-dcU" id="XTp-mR-Psy"/>
+                        <outlet property="timeLabel" destination="Ni6-Zm-Fil" id="9qT-3I-1M4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dial.high.fill" catalog="system" width="128" height="109"/>
+        <image name="dial.low.fill" catalog="system" width="128" height="109"/>
+    </resources>
 </document>
