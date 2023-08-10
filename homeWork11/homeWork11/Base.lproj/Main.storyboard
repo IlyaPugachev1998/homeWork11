@@ -53,7 +53,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-df-2lm">
                                         <rect key="frame" x="159.66666666666663" y="0.0" width="133.33333333333337" height="31"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <buttonConfiguration key="configuration" style="tinted" title="Clear"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Clear"/>
                                         <connections>
                                             <action selector="clearBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WjT-xe-npN"/>
                                         </connections>
@@ -182,8 +182,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="alarmClock" destination="nd6-rv-ezp" id="2cu-xk-Bhw"/>
-                        <outlet property="cleatBtn" destination="mCa-df-2lm" id="8La-Xb-rId"/>
+                        <outlet property="clearButton" destination="mCa-df-2lm" id="8La-Xb-rId"/>
                         <outlet property="datePicker" destination="gYj-wy-Asu" id="dwe-Ej-BpR"/>
                         <outlet property="progressView" destination="tCk-S0-atw" id="2RC-uf-z7N"/>
                         <outlet property="setThisTimeBtn" destination="qE4-mm-kCU" id="SHK-r6-Hex"/>
@@ -191,7 +190,6 @@
                         <outlet property="switch1" destination="71F-CB-PRH" id="FHy-z6-hU2"/>
                         <outlet property="textField" destination="nUb-av-dcU" id="XTp-mR-Psy"/>
                         <outlet property="timeLabel" destination="Ni6-Zm-Fil" id="9qT-3I-1M4"/>
-                        <outlet property="volumeLevel" destination="qsf-jP-BOu" id="GPc-pK-hDN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

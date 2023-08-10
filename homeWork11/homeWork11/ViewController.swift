@@ -1,8 +1,6 @@
 import UIKit
 
 final class ViewController: UIViewController {
-    @IBOutlet private weak var alarmClock: UILabel!
-    @IBOutlet private weak var volumeLevel: UILabel!
     @IBOutlet private weak var progressView: UIProgressView!
     @IBOutlet private weak var slider: UISlider!
     @IBOutlet private weak var textField: UITextField!
@@ -10,13 +8,18 @@ final class ViewController: UIViewController {
     @IBOutlet private weak var setThisTimeBtn: UIButton!
     @IBOutlet private weak var timeLabel: UILabel!
     @IBOutlet private weak var switch1: UISwitch!
-    @IBOutlet private weak var cleatBtn: UIButton!
+    @IBOutlet private weak var clearButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        switch1.isOn = false
         slider.minimumValue = 0
         slider.maximumValue = 100
+        setThisTimeBtn.backgroundColor = .black
+        setThisTimeBtn.layer.cornerRadius = 15
+        setThisTimeBtn.setImage(nil, for: .normal)
+        clearButton.setImage(nil, for: .normal)
     }
     @IBAction func sliderAction(_ sender: UISlider) {
         let value = sender.value
@@ -29,18 +32,17 @@ final class ViewController: UIViewController {
             slider.value = Float(value)
         }
     }
-    @IBAction func datePickerAction(_ sender: UIDatePicker) {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ru_RU")
-        formatter.dateFormat = "HH:mm"
-    }
+    @IBAction func datePickerAction(_ sender: UIDatePicker) {}
     @IBAction func setThisTimeAction(_ sender: UIButton) {
         let getDate = datePicker.date
-        let calendar = Calendar.current
-        let date = calendar.dateComponents([.hour, .minute], from: getDate)
-        guard let hour = date.hour,
-              let minute = date.minute else { return }
-        timeLabel.text = String(hour) + ":" + String(minute)
+              let calendar = Calendar.current
+              let date = calendar.dateComponents([.hour, .minute], from: getDate)
+              guard let hour = date.hour,
+                    let minute = date.minute else { return }
+              let hourS = hour < 10 ? "0" + String(hour) : String(hour)
+              let minuteS = minute < 10 ? "0" + String(minute) : String(minute)
+        timeLabel.text = hourS + ":" + minuteS
+        switch1.isOn = true
     }
     @IBAction func clearBtnAction(_ sender: UIButton) {
         timeLabel.text = ""
